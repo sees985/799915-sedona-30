@@ -18,7 +18,7 @@
             <a href="#">Карта штата</a>
           </li>
           <li>
-            <a href="catalog.html">Гостиницы</a>
+            <a>Гостиницы</a>
           </li>
         </ul>
         <a href="index.html">
@@ -44,11 +44,18 @@
                 <label><input type="checkbox" name="type" checked>Аппартаменты</label> 
             </fieldset>
             <div>
-              <label for="range">Стоимость в сутки (Р):</label>
+              <div>Стоимость в сутки (р):</div>
               <div>
-                <span>От 0 </span><span>до 3000</span>
+                <label>От <input type="text" name="min-price" value="0"></label>
+                <label>До <input type="text" name="max-price" value="3000"></label>
               </div>
-              <input type="range" id="range">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
             </div>
             <button type="submit">Показать</button>
           </form>
