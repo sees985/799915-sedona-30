@@ -3,7 +3,7 @@
 @font-face {
   font-family: "PT Sans";
   src: url("../fonts/PTSans.woff2") format("woff2"),
-       url("../fonts/PTSans.woff") format("woff");
+  url("../fonts/PTSans.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -11,7 +11,7 @@
 @font-face {
   font-family: "PT Sans";
   src: url("../fonts/PTSans-Bold.woff2") format("woff2"),
-       url("../fonts/PTSans-Bold.woff") format("woff");
+  url("../fonts/PTSans-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -21,6 +21,7 @@
 :root {
   --basic-black: #000000;
   --secondary-black: #231F20;
+  --basic-gray: #666666;
   --basic-white: #ffffff;
   --secondary-white: #EEEEEE;
   --basic-brown: #766357;
@@ -44,6 +45,52 @@
   font-weight: 400;
   color: var(--basic-black);
   text-transform: uppercase;
+}
+
+/* buttons */
+
+.button {
+  font: inherit;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+  text-decoration: none;
+}
+
+.button-interactive {
+  background-color: var(--basic-brown);
+  color: var(--basic-white);
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.button-interactive:hover {
+  background-color: var(--hover-brown);
+}
+
+.button-interactive:active {
+  background-color: var(--active-brown);
+}
+
+.button-interactive:active span {
+  opacity: 0.3;
+}
+
+.button-accent {
+  font-weight: 700;
+  line-height: 21px;
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+}
+
+.button-accent:hover {
+  background-color: var(--hover-blue);
+}
+
+.button-accent:active {
+  background-color: var(--active-blue);
+  opacity: 0.3;
 }
 
 /* header */
@@ -87,6 +134,8 @@
   background-repeat: no-repeat;
 }
 
+/* reasons */
+
 .reason {
   background-color: var(--secondary-white);
 }
@@ -108,38 +157,107 @@
   line-height: 21px;
 }
 
- .search-hotel-header {
+.search-hotel-header {
   font-weight: 700;
   font-size: 30px;
   line-height: 24px;
- }
-
- .button {
-  font: inherit;
-  text-align: center;
-  vertical-align: middle;
-  text-transform: uppercase;
-  border: none;
- }
-
- .button-interactive {
-   background-color: var(--basic-brown);
-   color: var(--basic-white);
-   font-size: 21px;
-   line-height: 26px;
-   font-weight: 700;
- }
-
- .button-interactive:hover {
-  background-color: var(--hover-brown);
 }
 
-.button-interactive:active {
-  background-color: var(--active-brown);
+.search-hotel-button {
+  font-size: 21px;
+  line-height: 26px;
 }
 
-.button-interactive:active span {
+/* filters */
+
+.filter {
+  background-image: url('../img/blur-background-photo.jpg');
+  background-color: var(--basic-blue);
+  background-repeat: no-repeat;
+}
+
+.filter-legend {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--basic-white);
+}
+
+.filter label {
+  line-height: 21px;
+  color: var(--basic-white);
+}
+
+.filter-submit-button {
+  line-height: 21px;
+  border-radius: 2px;
+  border: 2px solid #FFFFFF;
+  color: var(--basic-white);
+  background: none;
+}
+
+.filter-submit-button:hover {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+/* catalog */
+
+.catalog-result-header {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.catalog-result-header:hover {
+  color: var(--basic-blue);
+}
+
+.catalog-result-header:active {
   opacity: 0.3;
+  color: var(--basic-white);
+}
+
+.catalog-sort ul {
+  list-style: none;
+}
+
+.sort-option {
+  text-decoration-style: dotted;
+  text-decoration-line: underline;
+  text-decoration-color: var(--basic-blue);
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.sort-option:hover {
+  text-decoration-color: var(--basic-blue);
+  color: var(--basic-blue);
+  opacity: 1;
+}
+
+.sort-option:active {
+  text-decoration: none;
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+.sort-option-selected {
+  text-decoration: none;
+  color: var(--basic-blue);
+  opacity: 1;
+}
+
+.catalog-description-txt {
+  line-height: 21px;
+  color: var(--secondary-black);
+}
+
+.rating-score {
+  color: var(--basic-gray);
+  line-height: 21px;
 }
 
 /* footer */
