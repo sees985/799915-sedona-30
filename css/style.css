@@ -256,12 +256,26 @@
   line-height: 26px;
 }
 
+/* catalog */
+
+
+.catalog-content {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+}
+
+
 /* filters */
 
 .filter {
   background-image: url('../img/blur-background-photo.jpg');
   background-color: var(--basic-blue);
+  height: 217px;
   background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .filter-legend {
@@ -289,24 +303,34 @@
   background-color: var(--basic-white);
 }
 
-/* catalog */
+/* hotels */
 
-.catalog-result-header {
+.hotel-catalog {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+}
+
+.hotel-result {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.hotel-result-header {
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
 }
 
-.catalog-result-header:hover {
+.hotel-result-header:hover {
   color: var(--basic-blue);
 }
 
-.catalog-result-header:active {
+.hotel-result-header:active {
   opacity: 0.3;
   color: var(--basic-white);
 }
 
-.catalog-sort ul {
+.hotel-sort ul {
   list-style: none;
 }
 
@@ -339,7 +363,12 @@
   opacity: 1;
 }
 
-.catalog-description-txt {
+.hotel-list {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.hotel-description-txt {
   line-height: 21px;
   color: var(--secondary-black);
 }
