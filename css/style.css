@@ -410,10 +410,18 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.footer-contacts {
+  display: flex;
+  align-items: center;
+  padding: 36px;
+}
+
 .footer-contacts p {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  margin: 0;
+  padding-left: 36px;
 }
 
 .footer-contacts a {
@@ -441,6 +449,9 @@
   height: 48px;
   margin-right: 6px;
   background-color: var(--basic-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-social li:nth-child(3) {
@@ -461,9 +472,23 @@
   background-color: var(--active-blue);
 }
 
+.footer-copyright-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 36px;
+}
+
 .footer-copyright {
   line-height: 26px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding-left: 36px;
+}
+
+.copyright-text {
+  margin-right: 8px;
 }
 
 .copyright-link svg {
