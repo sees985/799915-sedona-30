@@ -109,24 +109,24 @@
             <span>Поиск гостиницы в Седоне</span>
           </button>
           <div class="modal">
-            <form class="modal-form">
+            <form class="modal-form" method="GET" action="https://echo.htmlacademy.ru/">
               <h3 class="visually-hidden">Форма поиска гостиницы в Седоне</h3>
                 <label class="modal-form-datepicker">
                   <span>Дата заезда:</span>
-                  <input type="text">
+                  <input type="text" name="entry-date">
                 </label>
                 <label class="modal-form-datepicker">
                   <span>Дата выезда:</span>
-                  <input type="text">
+                  <input type="text" name="exit-date">
                 </label>
               <div class="modal-form-visitors">
                 <label class="modal-form-number-input">
                   <span>Взрослые:</span>
-                  <input type="text">
+                  <input type="text" name="adults">
                 </label>
                 <label class="modal-form-number-input">
                   <span>Дети:</span>
-                  <input type="text">
+                  <input type="text" name="children">
                 </label>
               </div>
               <button class="button button-accent modal-form-submit" type="submit">

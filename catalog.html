@@ -33,25 +33,25 @@
     </header>
     <main class="main-container catalog-content">
       <h1 class="visually-hidden">Каталог гостиниц городка Седона</h1>
-      <form class="filter">
+      <form class="filter" method="GET" action="https://echo.htmlacademy.ru/">
         <h2 class="visually-hidden">Фильтр гостиниц</h2>
         <div class="filter-checkbox-group">
           <fieldset>
             <legend class="filter-legend filter-legend-txt">Инфраструктура:</legend>
-            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="infra" id="filter-pool" checked>
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="infra" id="filter-pool" value="pool" checked>
             <label for="filter-pool">Бассейн</label>
-            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="infra" id="filter-parking">
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="infra" id="filter-parking" value="parking">
             <label for="filter-parking">Парковка</label>
-            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="infra" id="filter-wifi">
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="infra" id="filter-wifi" value="wifi">
             <label for="filter-wifi">WI-FI</label>
           </fieldset>
           <fieldset>
             <legend class="filter-legend filter-legend-txt">Тип жилья:</legend>
-            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="type" id="filter-hotel" checked>
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="type" id="filter-hotel" value="hotel" checked>
             <label for="filter-hotel">Гостница</label>
-            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="type" id="filter-motel" checked>
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="type" id="filter-motel" value="motel" checked>
             <label for="filter-motel">Мотель</label>
-            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="type" id="filter-apartments" checked>
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="type" id="filter-apartments" value="apartments" checked>
             <label for="filter-apartments">Аппартаменты</label>
           </fieldset>
         </div>
