@@ -329,10 +329,13 @@
 .modal-form input {
   background-color: var(--secondary-gray);
   box-sizing: border-box;
+  border: none;
+  height: 38px;
 }
 
 .modal-form-datepicker {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
 }
@@ -347,6 +350,7 @@
 
 .modal-form-number-input {
   display: flex;
+  align-items: center;
 }
 
 .modal-form-number-input input {
