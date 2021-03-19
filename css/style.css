@@ -25,6 +25,9 @@
   --secondary-gray: #F2F2F2;
   --dark-gray: #ABABAB;
   --dark-gray-rgb: 171,171,171;
+  --secondary-dark-gray: #A9A9A9;
+  --light-gray: #EBEBEB;
+  --secondary-light-gray: #E5E5E5;
   --basic-white: #FFFFFF;
   --basic-white-rgb: 255, 255, 255;
   --secondary-white: #EEEEEE;
@@ -34,6 +37,7 @@
   --basic-blue: #81B3D2;
   --hover-blue: #669EC0;
   --active-blue: #5496BD;
+  --basic-dark-shadow-rgb: 0, 1, 1;
 }
 
 /*main styles*/
@@ -114,6 +118,9 @@
 
 .button-accent:active {
   background-color: var(--active-blue);
+}
+
+.button-accent:active span {
   opacity: 0.3;
 }
 
@@ -322,62 +329,135 @@
   text-align: center;
   z-index: 5;
   width: 568px;
+  box-shadow: rgba(var(--basic-dark-shadow-rgb), 0.15) 0 0 15px 0;
 }
 
 .modal-form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 229px 229px;
+  grid-template-rows: repeat(4, min-content);
+  grid-template-areas:
+    "first-datepicker first-datepicker"
+    "second-datepicker second-datepicker"
+    "first-number-input second-number-input"
+    "submit submit";
   padding: 61px 55px 55px 55px;
   background-color: var(--basic-white);
-
   line-height: 26px;
   font-weight: 700;
 }
+
+.modal-form > label:nth-of-type(1) {
+  grid-area: first-datepicker;
+}
+
+.modal-form > label:nth-of-type(2) {
+  grid-area: second-datepicker;
+}
+
+.modal-form > label:nth-of-type(3) {
+  grid-area: first-number-input;
+}
+
+.modal-form > label:nth-of-type(4) {
+  grid-area: second-number-input;
+}
+
 
 .modal-form input {
   background-color: var(--secondary-gray);
   box-sizing: border-box;
   border: none;
+  font: inherit;
+  line-height: inherit;
+  text-transform: inherit;
   height: 38px;
 }
 
+.modal-form input:hover {
+  background-color: var(--light-gray);
+}
+
+.modal-form input:focus {
+  background-color: var(--basic-white);
+  outline: 2px solid var(--secondary-light-gray);
+}
+
 .modal-form-datepicker {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
 }
 
-.modal-form-datepicker input {
+.modal-form-datepicker > input {
   width: 346px;
+  padding-left: 12px;
+  padding-right: 30px;
 }
 
-.modal-form-visitors {
-  display: flex;
+/*.modal-form-datepicker > span {
+  width: 112px;
+}*/
+
+.modal-form-datepicker > svg {
+  position: absolute;
+  right: 9px;
+  bottom: 8px;
+  fill: var(--secondary-dark-gray);
+}
+
+.modal-form-datepicker > svg:hover {
+  fill: var(--basic-black);
+}
+
+.modal-form-datepicker > svg:active {
+  fill: var(--basic-blue);
 }
 
 .modal-form-number-input {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-.modal-form-number-input input {
+.number-input-container {
+  position: relative;
+}
+
+.number-input-container > input {
   width: 114px;
+  text-align: center;
+  vertical-align: center;
+  padding: 0;
 }
 
-.modal-form-number-input:first-child {
-  margin-right: auto;
+.number-input-container > svg {
+  position: absolute;
+  fill: var(--secondary-dark-gray);
 }
 
-.modal-form-number-input:first-child span {
-  width: 101px;
-  margin-right: 11px;
-  text-align: start;
+.number-input-container > svg:hover {
+  fill: var(--basic-black);
 }
 
-.modal-form-number-input:last-child span {
-  margin-right: 25px;
-  text-align: start;
+.number-input-container > svg:active {
+  fill: var(--basic-blue);
+}
+
+.number-input-container .number-input-decrease {
+  top: 18px;
+  left: 13px;
+}
+
+.number-input-container .number-input-increase {
+  top: 14px;
+  right: 14px;
+}
+
+.second-number-input > span {
+  margin-left: 47px;
 }
 
 .modal-form-submit {
@@ -385,6 +465,7 @@
   padding-top: 16px;
   padding-bottom: 16px;
   align-content: center;
+  grid-area: submit;
 }
 
 .modal-form-submit span {
@@ -773,6 +854,10 @@
 .map {
   grid-row: 3 / 4;
   grid-column: 1 / 2;
+}
+
+.map iframe {
+  border: none;
 }
 
 /* footer */
