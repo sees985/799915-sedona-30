@@ -878,6 +878,7 @@
   display: grid;
   grid-template-columns: min-content min-content;
   grid-template-rows: min-content min-content min-content;
+  margin-top: -5px;
 }
 
 .item-description-header {
@@ -912,6 +913,7 @@
   line-height: 21px;
   color: var(--secondary-black);
   margin-bottom: 16px;
+  padding-top: 6px
 }
 
 .item-description-content .button {
@@ -1045,6 +1047,7 @@
   color: var(--basic-white);
   text-decoration: none;
   cursor: pointer;
+  height: 17px;
 }
 
 .social-link:active .social-link-logo {
@@ -1066,7 +1069,7 @@
 }
 
 .copyright-text {
-  margin-right: 8px;
+  margin-right: 6px;
 }
 
 .copyright-link svg {
