@@ -1047,7 +1047,6 @@
   color: var(--basic-white);
   text-decoration: none;
   cursor: pointer;
-  height: 17px;
 }
 
 .social-link:active .social-link-logo {
