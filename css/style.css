@@ -28,6 +28,7 @@
   --secondary-dark-gray: #A9A9A9;
   --light-gray: #EBEBEB;
   --secondary-light-gray: #E5E5E5;
+  --alternative-light-gray: #CACACA;
   --basic-white: #FFFFFF;
   --basic-white-rgb: 255, 255, 255;
   --secondary-white: #EEEEEE;
@@ -151,6 +152,7 @@
   list-style: none;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-items: center;
   padding: 15px 72px 17px 72px;
 }
@@ -210,7 +212,7 @@
   justify-content: center;
   background-image:
     url("../img/decorate-background-photo.png"),
-    url('../img/background-photo.jpg');
+    url("../img/background-photo.jpg");
   background-position:
     0 bottom,
     0 0;
@@ -242,18 +244,18 @@
 
 .main-content-first-reason {
   display: grid;
-  grid-template-rows: min-content 331px;
+  grid-template-rows: min-content minmax(331px, auto);
 }
 
 .main-content-reasons {
   display: grid;
-  grid-template-rows: min-content 256px;
+  grid-template-rows: min-content minmax(256px, auto);
 }
 
 .reasons-grid {
   grid-row: 2/3;
   display: grid;
-  grid-template-columns: 400px 400px 400px;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   padding-top: 47px;
   padding-bottom: 52px;
@@ -262,7 +264,7 @@
 .reasons-accent-grid {
   grid-row: 2/3;
   display: grid;
-  grid-template-columns: 400px 400px 400px;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   padding-top: 60px;
   padding-bottom: 79px;
@@ -297,19 +299,19 @@
 
 .first-reason-description {
   display: grid;
-  grid-template-columns: 1fr 800px;
+  grid-template-columns: 1fr minmax(800px, auto);
   height: 256px;
 }
 
 .fourth-reason-description {
   display: grid;
-  grid-template-columns: 800px 1fr;
+  grid-template-columns: minmax(800px, auto) 1fr;
 }
 
 .reason-accent {
   color: var(--basic-white);
   background-color: var(--basic-blue);
-  padding: 47px 49px 50px 49px;
+  padding: 47px 48px 50px 48px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -324,7 +326,7 @@
 }
 
 .reason-accent-item {
-  padding: 0 59px;
+  padding: 0 58px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -384,7 +386,7 @@
 
 .modal-form {
   display: grid;
-  grid-template-columns: 229px 229px;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, min-content);
   grid-template-areas:
     "first-datepicker first-datepicker"
@@ -424,6 +426,10 @@
   height: 38px;
 }
 
+.modal-form input::placeholder {
+  color: var(--basic-black);
+}
+
 .modal-form input:hover {
   background-color: var(--light-gray);
 }
@@ -447,18 +453,24 @@
   padding-right: 30px;
 }
 
-.modal-form-datepicker > svg {
+.datepicker-control {
   position: absolute;
-  right: 9px;
-  bottom: 8px;
+  padding: 2px;
+  border: none;
+  background: none;
+  right: 6px;
+  bottom: 4px;
+}
+
+.datepicker-control > svg {
   fill: var(--secondary-dark-gray);
 }
 
-.modal-form-datepicker > svg:hover {
+.datepicker-control:hover > svg {
   fill: var(--basic-black);
 }
 
-.modal-form-datepicker > svg:active {
+.datepicker-control:active > svg {
   fill: var(--basic-blue);
 }
 
@@ -479,27 +491,33 @@
   padding: 0;
 }
 
-.number-input-container > svg {
+.number-input-control {
   position: absolute;
+  padding: 2px;
+  border: none;
+  background: none;
+}
+
+.number-input-control > svg {
   fill: var(--secondary-dark-gray);
 }
 
-.number-input-container > svg:hover {
+.number-input-control:hover > svg {
   fill: var(--basic-black);
 }
 
-.number-input-container > svg:active {
+.number-input-control:active > svg {
   fill: var(--basic-blue);
 }
 
 .number-input-container .number-input-decrease {
-  top: 18px;
-  left: 13px;
+  top: 7px;
+  left: 11px;
 }
 
 .number-input-container .number-input-increase {
-  top: 14px;
-  right: 14px;
+  top: 11px;
+  right: 12px;
 }
 
 .first-number-input .number-input-container {
@@ -537,7 +555,7 @@
 /* filters */
 
 .filter {
-  background-image: url('../img/blur-background-photo.jpg');
+  background-image: url("../img/blur-background-photo.jpg");
   background-color: var(--basic-blue);
   background-repeat: no-repeat;
   display: grid;
@@ -754,7 +772,7 @@
 
 .hotel-catalog {
   display: grid;
-  grid-template-rows: 86px min-content;
+  grid-template-rows: minmax(86px, auto) min-content;
 }
 
 .hotel-result {
@@ -786,6 +804,7 @@
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -843,12 +862,29 @@
 }
 
 .sort-control {
-  background-color: var(--basic-white);
-  padding: 0;
+  padding: 0 2px;
+  background: none;
+  border: none;
+}
+
+.sort-control > svg {
+  fill: var(--alternative-light-gray);
+}
+
+.sort-control-selected > svg {
+  fill: var(--basic-blue);
+}
+
+.sort-control:hover > svg {
+  fill: var(--basic-black);
+}
+
+.sort-control:active > svg {
+  fill: var(--basic-blue);
 }
 
 .sort-control-asc {
-  margin-right: 12px;
+  margin-right: 6px;
 }
 
 .hotel-list {
@@ -905,6 +941,7 @@
 
 .item-description-content {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
 }
@@ -936,6 +973,7 @@
 
 .hotel-item-rating {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
@@ -945,6 +983,7 @@
 
 .rating-score-txt {
   display: inline-block;
+  vertical-align: middle;
   width: 81px;
   padding: 3px 15px 3px 12px;
   background-color: var(--secondary-gray);
@@ -967,10 +1006,11 @@
 
 .footer {
   box-sizing: border-box;
-  height: 126px;
+  min-height: 126px;
   width: 100%;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
   padding: 16px 136px 42px 125px
@@ -986,6 +1026,7 @@
 
 .footer-contacts {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-contacts p {
@@ -998,6 +1039,7 @@
 
 .footer-contacts .contacts-hashtag {
   display: inline-block;
+  vertical-align: middle;
   margin-bottom: 10px;
 }
 
@@ -1009,6 +1051,7 @@
 
 .footer-social {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   margin-left: 23px;
@@ -1017,6 +1060,7 @@
 .footer-social ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -1027,6 +1071,7 @@
   margin-right: 6px;
   background-color: var(--basic-blue);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
@@ -1055,6 +1100,7 @@
 
 .footer-copyright-wrapper {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -1062,6 +1108,7 @@
   line-height: 26px;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding-left: 36px;

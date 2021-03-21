@@ -6,7 +6,7 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/styles.min.css" rel="stylesheet">
 </head>
 <body class="page-body">
   <div class="page-container page-shadow">
@@ -94,8 +94,16 @@
             </ul>
           </div>
           <div class="hotel-sort-controls">
-            <button class="button sort-control sort-control-asc"><img src="img/icons/up-dir.svg" width="11" height="10" alt="По возрастанию"></button>
-            <button class="button sort-control sort-control-desc"><img src="img/icons/down-dir.svg" width="11" height="10" alt="По убыванию"></button>
+            <button class="button sort-control sort-control-asc" aria-label="Сортировать по возрастанию">
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 0L0 10H11L5.5 0Z"/>
+              </svg>
+            </button>
+            <button class="button sort-control sort-control-selected sort-control-desc" aria-label="Сортировать по убыванию">
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 10L0 0H11"/>
+              </svg>
+            </button>
           </div>
         </div>
         <div class="hotel-list">
@@ -122,10 +130,18 @@
             </div>
             <div class="hotel-item-rating">
               <div class="rating-stars">
-                <img src="img/icons/star.svg" width="19" height="17" alt="звезда">
-                <img src="img/icons/star.svg" width="19" height="17" alt="звезда">
-                <img src="img/icons/star.svg" width="19" height="17" alt="звезда">
-                <img src="img/icons/star.svg" width="19" height="17" alt="звезда">
+                <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                </svg>
+                <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                </svg>
+                <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                </svg>
+                <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                </svg>
               </div>
               <div class="rating-score">
                 <span class="rating-score-txt">Рейтинг 8.5</span>
@@ -155,9 +171,15 @@
             </div>
             <div class="hotel-item-rating">
               <div class="rating-stars">
-                <img src="img/icons/star.svg" width="19" height="17" alt="звезда">
-                <img src="img/icons/star.svg" width="19" height="17" alt="звезда">
-                <img src="img/icons/star.svg" width="19" height="17" alt="звезда">
+                <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                </svg>
+                <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                </svg>
+                <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                </svg>
               </div>
               <div class="rating-score">
                 <span class="rating-score-txt">Рейтинг 8.9</span>
@@ -187,8 +209,12 @@
             </div>
             <div class="hotel-item-rating">
               <div class="rating-stars">
-                <img src="img/icons/star.svg" width="19" height="17" alt="звезда">
-                <img src="img/icons/star.svg" width="19" height="17" alt="звезда">
+                <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                </svg>
+                <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                </svg>
               </div>
               <div class="rating-score">
                 <span class="rating-score-txt">Рейтинг 9.2</span>
