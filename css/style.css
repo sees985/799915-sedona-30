@@ -384,6 +384,10 @@
   box-shadow: rgba(var(--basic-dark-shadow-rgb), 0.15) 0 0 15px 0;
 }
 
+.modal-hide {
+  display: none;
+}
+
 .modal-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -993,13 +997,24 @@
 
 /* map */
 
-.map {
+.map-wrapper {
   grid-row: 3 / 4;
   grid-column: 1 / 2;
+  width: 100%;
+  height: 593px;
+}
+
+.map {
+  position: relative;
 }
 
 .map iframe {
+  position: absolute;
   border: none;
+}
+
+.map img {
+  position: absolute;
 }
 
 /* footer */
