@@ -279,6 +279,7 @@
   padding-right: 46px;
   padding-left: 46px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -300,7 +301,7 @@
 .first-reason-description {
   display: grid;
   grid-template-columns: 1fr minmax(800px, auto);
-  height: 256px;
+  min-height: 256px;
 }
 
 .fourth-reason-description {
@@ -313,6 +314,7 @@
   background-color: var(--basic-blue);
   padding: 47px 48px 50px 48px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -569,6 +571,7 @@
 
 .filter-checkbox-group {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .filter-checkbox-group fieldset {
@@ -576,6 +579,7 @@
   padding: 0;
   border: none;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
 }
@@ -898,6 +902,7 @@
 
 .hotel-item {
   display: flex;
+  flex-wrap: wrap;
   padding: 30px 72px;
   box-sizing: border-box;
   border-bottom: 1px solid var(--secondary-light-gray);
