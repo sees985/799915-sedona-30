@@ -405,19 +405,19 @@
   font-weight: 700;
 }
 
-.modal-form > label:nth-of-type(1) {
+.modal-form > .modal-form-datepicker:first-of-type {
   grid-area: first-datepicker;
 }
 
-.modal-form > label:nth-of-type(2) {
+.modal-form > .modal-form-datepicker:nth-of-type(2) {
   grid-area: second-datepicker;
 }
 
-.modal-form > label:nth-of-type(3) {
+.modal-form > .first-number-input {
   grid-area: first-number-input;
 }
 
-.modal-form > label:nth-of-type(4) {
+.modal-form > .second-number-input {
   grid-area: second-number-input;
 }
 
@@ -530,7 +530,7 @@
   margin-right: 2px;
 }
 
-.second-number-input > span {
+.second-number-input > label {
   margin-left: 50px;
 }
 
